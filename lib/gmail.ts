@@ -57,7 +57,9 @@ export async function sendEnquiryNotification(data: {
 
   const from = "info@somersetwindowcleaning.co.uk";
   const to = "info@somersetwindowcleaning.co.uk";
-  const subject = `Render Cleaning Enquiry — ${data.name} (${data.postcode})`;
+  const safeName = data.name.replace(/[\r\n]/g, " ");
+  const safePostcode = data.postcode.replace(/[\r\n]/g, " ");
+  const subject = `Render Cleaning Enquiry — ${safeName} (${safePostcode})`;
 
   const message = [
     `From: Somerset Render Cleaning <${from}>`,

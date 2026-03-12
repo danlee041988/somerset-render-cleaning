@@ -22,7 +22,7 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="flex items-center justify-between h-16 sm:h-18">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Left: Brand */}
           <div className="flex items-center gap-3">
             {/* SR Monogram */}

@@ -49,6 +49,14 @@ export async function POST(request: NextRequest) {
       console.error("[Enquiry] Gmail error:", emailResult.reason);
     }
 
+    // Fail if both sinks failed — lead would be lost
+    if (sheetsResult.status === "rejected" && emailResult.status === "rejected") {
+      return NextResponse.json(
+        { error: "Something went wrong. Please try calling us instead." },
+        { status: 500 }
+      );
+    }
+
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("[Enquiry] Unexpected error:", error);

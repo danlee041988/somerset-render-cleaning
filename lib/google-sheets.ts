@@ -47,7 +47,7 @@ export async function appendRenderLead(data: {
   await client.sheets.spreadsheets.values.append({
     spreadsheetId: client.spreadsheetId,
     range: "Render Leads!A:H",
-    valueInputOption: "USER_ENTERED",
+    valueInputOption: "RAW",
     requestBody: { values: [row] },
   });
 }

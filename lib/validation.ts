@@ -29,7 +29,7 @@ export const enquirySchema = z.object({
     .trim()
     .optional()
     .default(""),
-  honeypot: z.string().max(0, "Bot detected").optional().default(""),
+  honeypot: z.string().optional().default(""),
   gclid: z.string().max(200).optional().default(""),
 });
 
