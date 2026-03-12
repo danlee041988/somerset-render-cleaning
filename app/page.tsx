@@ -1,8 +1,25 @@
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import TrustBar from "@/components/TrustBar";
+import BeforeAfter from "@/components/BeforeAfter";
+import Process from "@/components/Process";
+import WhyUs from "@/components/WhyUs";
+import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer";
+
 export default function Home() {
   return (
-    <main>
-      <h1>Somerset Render Cleaning</h1>
-      <p>Site under construction</p>
-    </main>
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <TrustBar />
+        <BeforeAfter />
+        <Process />
+        <WhyUs />
+        <FAQ />
+      </main>
+      <Footer />
+    </>
   );
 }
