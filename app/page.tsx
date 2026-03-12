@@ -4,6 +4,7 @@ import TrustBar from "@/components/TrustBar";
 import BeforeAfter from "@/components/BeforeAfter";
 import Process from "@/components/Process";
 import WhyUs from "@/components/WhyUs";
+import EnquiryForm from "@/components/EnquiryForm";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <BeforeAfter />
         <Process />
         <WhyUs />
+        <EnquiryForm />
         <FAQ />
       </main>
       <Footer />
