@@ -5,10 +5,11 @@ import BeforeAfter from "@/components/BeforeAfter";
 import Process from "@/components/Process";
 import Pricing from "@/components/Pricing";
 import WhyUs from "@/components/WhyUs";
-import Testimonials from "@/components/Testimonials";
+import GoogleReviews from "@/components/GoogleReviews";
 import EnquiryForm from "@/components/EnquiryForm";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import MobileCTA from "@/components/MobileCTA";
 
 export default function Home() {
   return (
@@ -21,11 +22,12 @@ export default function Home() {
         <Process />
         <Pricing />
         <WhyUs />
-        <Testimonials />
+        <GoogleReviews />
         <EnquiryForm />
         <FAQ />
       </main>
       <Footer />
+      <MobileCTA />
     </>
   );
 }

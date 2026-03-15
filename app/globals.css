@@ -8,5 +8,22 @@
   }
   body {
     @apply bg-white text-brand-charcoal antialiased;
+    /* Extra bottom padding on mobile for sticky CTA bar */
+    @apply pb-16 sm:pb-0;
   }
+}
+
+/* Framer Motion fallback: ensure content is visible in background tabs
+   or when JS animations fail to complete. CSS animations run regardless
+   of tab visibility. */
+@keyframes fm-ensure-visible {
+  to {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+[style*="opacity: 0"],
+[style*="opacity:0"] {
+  animation: fm-ensure-visible 0s 1.5s forwards;
 }

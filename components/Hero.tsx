@@ -10,11 +10,11 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Text */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ y: 20 }}
+            animate={{ y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-charcoal leading-tight tracking-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-charcoal leading-tight tracking-tight font-heading">
               Professional Render Cleaning Across Somerset
             </h1>
             <p className="mt-5 text-lg text-brand-slate leading-relaxed max-w-lg">
@@ -40,8 +40,8 @@ export default function Hero() {
 
           {/* Image */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.97 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ scale: 0.97 }}
+            animate={{ scale: 1 }}
             transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
             className="relative"
           >

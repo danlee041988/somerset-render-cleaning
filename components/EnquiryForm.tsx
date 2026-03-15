@@ -267,7 +267,7 @@ export default function EnquiryForm() {
         >
           {/* Heading */}
           <div className="text-center mb-8 sm:mb-10">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-charcoal tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-charcoal font-heading tracking-tight">
               Get Your Free Quote
             </h2>
             <p className="mt-3 text-brand-slate text-base sm:text-lg max-w-lg mx-auto leading-relaxed">

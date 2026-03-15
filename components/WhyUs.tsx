@@ -33,7 +33,7 @@ export default function WhyUs() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         {/* Heading */}
         <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-charcoal tracking-tight">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-charcoal font-heading tracking-tight">
             Why Somerset Trusts Us
           </h2>
         </div>
