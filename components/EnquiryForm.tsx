@@ -7,13 +7,15 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import { enquirySchema, type EnquiryFormData } from "@/lib/validation";
+import { getGCLID } from "@/lib/ad-tracking";
+import { trackFormSubmit } from "@/lib/analytics";
 import type { z } from "zod";
 
 type EnquiryFormInput = z.input<typeof enquirySchema>;
 
 function EnquiryFormInner() {
   const searchParams = useSearchParams();
-  const gclid = searchParams.get("gclid") ?? "";
+  const gclid = searchParams.get("gclid") ?? getGCLID() ?? "";
 
   const [submitted, setSubmitted] = useState(false);
   const [apiError, setApiError] = useState<string | null>(null);
@@ -52,6 +54,10 @@ function EnquiryFormInner() {
         );
       }
 
+      trackFormSubmit({
+        service_type: "render_cleaning",
+        lead_source: "website",
+      });
       setSubmitted(true);
     } catch (err) {
       setApiError(
