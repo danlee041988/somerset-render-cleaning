@@ -42,6 +42,28 @@ export default function Header() {
             </div>
           </div>
 
+          {/* Centre: Nav links — desktop only */}
+          <nav className="hidden md:flex items-center gap-6">
+            <a
+              href="#gallery"
+              className="text-sm font-medium text-brand-slate hover:text-brand-green transition-colors"
+            >
+              Our Work
+            </a>
+            <a
+              href="#pricing"
+              className="text-sm font-medium text-brand-slate hover:text-brand-green transition-colors"
+            >
+              Pricing
+            </a>
+            <a
+              href="#enquiry"
+              className="text-sm font-medium text-brand-slate hover:text-brand-green transition-colors"
+            >
+              Get a Quote
+            </a>
+          </nav>
+
           {/* Right: Phone + CTA */}
           <div className="flex items-center gap-3 sm:gap-4">
             {/* Phone - full on desktop, icon on mobile */}

@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import { enquirySchema, type EnquiryFormData } from "@/lib/validation";
 import { getGCLID } from "@/lib/ad-tracking";
-import { trackFormSubmit } from "@/lib/analytics";
+import { trackFormSubmit, trackFormStart } from "@/lib/analytics";
 import type { z } from "zod";
 
 type EnquiryFormInput = z.input<typeof enquirySchema>;
@@ -19,6 +19,14 @@ function EnquiryFormInner() {
 
   const [submitted, setSubmitted] = useState(false);
   const [apiError, setApiError] = useState<string | null>(null);
+  const [formStarted, setFormStarted] = useState(false);
+
+  const handleFormStart = () => {
+    if (!formStarted) {
+      setFormStarted(true);
+      trackFormStart();
+    }
+  };
 
   const {
     register,
@@ -81,8 +89,11 @@ function EnquiryFormInner() {
           Thank you!
         </h3>
         <p className="text-brand-slate text-lg leading-relaxed max-w-md mx-auto">
-          We&apos;ll be in touch within 24 hours. If it&apos;s urgent, give us a
-          call and we&apos;ll sort it straight away.
+          We&apos;ll be in touch within 24 hours. If it&apos;s urgent,{" "}
+          <a href="tel:01749749900" className="text-brand-green font-semibold hover:underline">
+            give us a call
+          </a>{" "}
+          and we&apos;ll sort it straight away.
         </p>
       </motion.div>
     );
@@ -102,6 +113,7 @@ function EnquiryFormInner() {
             type="text"
             autoComplete="name"
             placeholder="e.g. John Smith"
+            onFocus={handleFormStart}
             className={inputClasses(errors.name)}
           />
         </Field>
@@ -174,8 +186,13 @@ function EnquiryFormInner() {
       {/* GCLID */}
       <input {...register("gclid")} type="hidden" />
 
+      {/* Reassurance */}
+      <p className="mt-4 sm:mt-5 mb-4 text-sm text-brand-slate text-center">
+        We&apos;ll call you back, not spam you. No obligation.
+      </p>
+
       {/* Submit */}
-      <div className="mt-6 sm:mt-8">
+      <div>
         <button
           type="submit"
           disabled={isSubmitting}
@@ -191,11 +208,6 @@ function EnquiryFormInner() {
           {apiError}
         </p>
       )}
-
-      {/* Reassurance */}
-      <p className="mt-4 text-sm text-brand-slate text-center">
-        We&apos;ll call you back, not spam you. No obligation.
-      </p>
     </form>
   );
 }

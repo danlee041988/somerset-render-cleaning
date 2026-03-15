@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "somersetrendercleaning.co.uk" }],
+      "destination": "https://www.somersetrendercleaning.co.uk/:path*",
+      "permanent": true
+    }
+  ]
+}
