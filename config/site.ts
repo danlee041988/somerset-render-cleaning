@@ -6,7 +6,7 @@ export const siteConfig = {
   url: "https://www.somersetrendercleaning.co.uk",
   swcUrl: "https://www.somersetwindowcleaning.co.uk",
   phone: "01458 860 339",
-  email: "info@somersetwindowcleaning.co.uk",
+  email: "info@somersetrendercleaning.co.uk",
   address: {
     street: "Meare",
     region: "Somerset",
