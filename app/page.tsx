@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
-import BeforeAfter from "@/components/BeforeAfter";
 import Process from "@/components/Process";
 import Pricing from "@/components/Pricing";
 import WhyUs from "@/components/WhyUs";
@@ -18,7 +17,6 @@ export default function Home() {
       <main>
         <Hero />
         <TrustBar />
-        <BeforeAfter />
         <Process />
         <Pricing />
         <WhyUs />

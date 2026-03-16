@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Phone } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
@@ -25,13 +26,14 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           {/* Left: Brand */}
           <div className="flex items-center gap-3">
-            {/* SR Monogram */}
-            <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-brand-green flex items-center justify-center">
-              <span className="text-white font-bold text-sm tracking-tight leading-none">
-                SR
-              </span>
-            </div>
-            {/* Text */}
+            <Image
+              src="/images/logo-200.png"
+              alt="Somerset Render Cleaning"
+              width={40}
+              height={40}
+              className="flex-shrink-0"
+              priority
+            />
             <div className="hidden sm:block">
               <p className="text-brand-charcoal font-semibold text-sm leading-tight">
                 {siteConfig.name}

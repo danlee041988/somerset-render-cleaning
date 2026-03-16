@@ -5,8 +5,8 @@ export const siteConfig = {
     "Professional render cleaning across Somerset. Specialist softwash treatment removes algae and black spots. £5M insured, 224 five-star reviews. Free quotes.",
   url: "https://www.somersetrendercleaning.co.uk",
   swcUrl: "https://www.somersetwindowcleaning.co.uk",
-  phone: "01749 749900",
-  email: "info@somersetrendercleaning.co.uk",
+  phone: "01458 860 339",
+  email: "info@somersetwindowcleaning.co.uk",
   address: {
     street: "Meare",
     region: "Somerset",

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Phone, Mail } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
@@ -10,7 +11,15 @@ export default function Footer() {
         <div className="grid sm:grid-cols-2 gap-8 sm:gap-12">
           {/* Left column */}
           <div>
-            <h3 className="text-white font-bold text-lg">{siteConfig.name}</h3>
+            <div className="flex items-center gap-3 mb-2">
+              <Image
+                src="/images/logo-200.png"
+                alt="Somerset Render Cleaning"
+                width={36}
+                height={36}
+              />
+              <h3 className="text-white font-bold text-lg">{siteConfig.name}</h3>
+            </div>
             <p className="mt-2 text-slate-400 text-sm">
               {siteConfig.legal.tradingName}
             </p>
